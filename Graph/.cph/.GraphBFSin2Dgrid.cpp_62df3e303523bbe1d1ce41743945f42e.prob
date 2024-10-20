@@ -1,0 +1,1 @@
+{"name":"Local: GraphBFSin2Dgrid","url":"f:\\Phitron\\Codeforce\\self solve\\Graph\\GraphBFSin2Dgrid.cpp","tests":[{"id":1706907127977,"input":"3 4\n1234\n1234\n1234\n1 1","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"f:\\Phitron\\Codeforce\\self solve\\Graph\\GraphBFSin2Dgrid.cpp","group":"local","local":true}
