@@ -31,6 +31,7 @@ int updateBit(int n,int pos,int value){
 
 }
 //https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqazVuWXhDZHoxR1VmNHVtZ0tkNkxzWlo3a21tUXxBQ3Jtc0tsWEpoRXBVem0xaWlpdHlJNms1RXdFNnYtRU9lTnY2WnF1T29GNEtBaTgzUFQ0MlB3UWZEaVlVTERuaFJuNVhGQlozVUtveTBnR1I3TkxEYmlRUktlaVpYYWpxVG9QeHhXV1JaOFpQenR1ZUtyZFZGZw&q=https%3A%2F%2Fdrive.google.com%2Ffile%2Fd%2F1IEF5o6w5dpUXH20F_fH58WVQOIJoOd_U%2Fview%3Fusp%3Dsharing&v=s8l8NWII3qw
+//https://www.youtube.com/watch?v=s8l8NWII3qw&ab_channel=ApnaCollege
 
 
 bool isPowerOf2(int n){
@@ -52,6 +53,20 @@ int numberOfOnes(int n){
     //n and n-1 korle setbit mane n er last er theke 1st 1  chole jabe
     //evabe jotobar kore n zero hobe totota 1 acea 
     //done
+}
+
+void subsets (int arr[],int n){
+    //algo 2 khata
+    for(int i=0;i<(1<<n);i++){
+        for (int j=0;j<n;j++){//because n th bit er por shob zero
+
+            if(i & (1<<j)){//getbit if true mane 1 acea tahole string er substring acea
+                cout<<arr[j]<<" ";
+
+            }
+            cout<<endl;
+        }
+    }
 }
 
 int main(){
