@@ -235,7 +235,7 @@ int main(){
     // printBinary(clearLSB(59,4));
     // printBinary(60);
     // printBinary(clearMSB(60,3));//0,1,2 num bit same bakigula 0
-    //  swap2number(4,5);
+    // swap2number(4,5);
     return 0;
 
 }
