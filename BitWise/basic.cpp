@@ -40,11 +40,13 @@ bool isPowerOf2(int n){
     //n && because if n is zero then then ans is zero
     // so we and this 
     // if n is power of 2 then  n&n-1 is zero
+
 }
 
 
 
 int numberOfOnes(int n){
+    // Count set bits in integer 
     int count=0;
     while(n){
         n=n&n-1;
@@ -161,6 +163,62 @@ int mulby2(int n){
     return (n<<1);
 }
 
+char  upperToLower(char c){
+    c =  setBit(c,5);
+    return c;
+}
+
+char lowerToUpper(char c){
+    c = clearBit(c,5);
+    return c;
+}
+
+int clearLSB(int n,int range ){
+    // Clear all bits from LSB to ith bit 
+    //ekta range a least significant bit clear kora
+    //jemon 0 - 4 porjonto bit clear kora 
+    // 0 thekei suru hbe
+    //single operation a
+    int mask = ~((1<<(range+1))-1);
+    int ans = n & mask;
+    return ans;
+
+    //algo 2
+
+}
+
+int clearMSB(int n,int range){
+    //Clearing all bits from MSB to i-th bit
+    // jemon 3 number bit theke porer shobgula 0 korbo
+    //range tahole hbe 3
+    //0 - 3 thakbe same bakigula zero
+    //algo 2
+
+    int mask = (1<<range)-1;
+    int ans = n & mask;
+    return ans;
+
+
+}
+
+void swap2number(int a,int b){
+    int temp = a ^ b;//XOR
+     a= (a ^ temp); // a^a^b==b 
+    //beacuse a^a=0 and 0^b==b 
+    //swap 1 ta holo same vabe arekta swap
+     b= (b ^ temp);
+    cout<<a<<" "<<b<<endl;
+}
+
+int clearLSBlast(int n){
+
+    //last set bit
+    return (n&(n-1));
+}
+
+int extractLSBlast(int n){
+    return (n & (~(n-1)));
+}
 
 int main(){
      
@@ -169,8 +227,15 @@ int main(){
     // cout<<setBit(5,1)<<endl;
     // cout<<clearBit(5,2)<<endl;
     // cout<<updateBit(5,1,1)<<endl;
-    evenOdd(5);
-     
+    // evenOdd(5);
+    // cout<<upperToLower('A')<<endl;
+    // cout<<lowerToUpper('a')<<endl;
+
+    // printBinary(59);
+    // printBinary(clearLSB(59,4));
+    // printBinary(60);
+    // printBinary(clearMSB(60,3));//0,1,2 num bit same bakigula 0
+    //  swap2number(4,5);
     return 0;
 
 }
