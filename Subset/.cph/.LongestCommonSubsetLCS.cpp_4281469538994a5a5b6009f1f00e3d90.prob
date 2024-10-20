@@ -1,0 +1,1 @@
+{"name":"Local: LongestCommonSubsetLCS","url":"f:\\Phitron\\Codeforce\\self solve\\Subset\\LongestCommonSubsetLCS.cpp","tests":[{"id":1710274636619,"input":"abcdfgr\nacfdgr","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"f:\\Phitron\\Codeforce\\self solve\\Subset\\LongestCommonSubsetLCS.cpp","group":"local","local":true}
