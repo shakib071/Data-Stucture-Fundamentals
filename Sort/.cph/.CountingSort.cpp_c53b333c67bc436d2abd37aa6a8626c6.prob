@@ -1,0 +1,1 @@
+{"name":"Local: CountingSort","url":"f:\\Phitron\\Codeforce\\self solve\\Sort\\CountingSort.cpp","tests":[{"id":1710268556260,"input":"hello","output":""},{"id":1710268669052,"input":"aaabbbbb","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"f:\\Phitron\\Codeforce\\self solve\\Sort\\CountingSort.cpp","group":"local","local":true}

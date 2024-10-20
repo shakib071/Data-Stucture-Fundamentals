@@ -1,0 +1,1 @@
+oper  n=Developer("Shakib","Harami cm",23,"c++");
