@@ -7,6 +7,7 @@ using namespace std;
 int getBit(int n,int pos){
     //pos starts from 0 and from left
     return (n & (1<<pos)) !=0;
+    
 }
 
 int setBit(int n,int pos){
@@ -69,13 +70,106 @@ void subsets (int arr[],int n){
     }
 }
 
+
+
+//https://www.youtube.com/watch?v=WEpLyOc0bCE&ab_channel=ApnaCollege
+
+int unique(int arr[],int n){
+    //if one is unique and others present twice
+    int xorsum=0;
+
+    for (int i=0;i<n;i++){
+        xorsum = xorsum ^ arr[i];
+    }
+    return xorsum;
+}
+
+void unique2(int arr[],int n){
+    //2 numbers are unique and others are present twice
+
+    int xorsum=0;
+    for (int i=0;i<n;i++){
+        xorsum = xorsum ^ arr[i];
+    }
+    int tempxor= xorsum;
+    int setbit =0;
+    int pos=0;
+    while(setbit!=1){
+        setbit = xorsum & 1;
+        pos++;
+        xorsum = xorsum >> 1;
+        //getbit 
+        //algo2  khata
+
+    }
+    int newxor=0;
+    for (int i=0;i<n;i++){
+        if(setBit(arr[i],pos-1)){
+            newxor = newxor ^ arr[i];
+        }
+    }
+
+    //newxor is one unique number
+
+    cout<<newxor<<endl;
+    cout<<(newxor ^ tempxor)<<endl;
+
+
+}
+
+
+int unique3(int arr[],int n){
+    // one is unique others 3 times
+    int result =0;
+    for(int i=0;i<64;i++){//64 bit
+        int sum=0;
+        for(int j=0;j<n;j++){
+            if(getBit(arr[j],i)){
+                sum++;
+            }
+        }
+
+        if(sum%3!=0){
+            result= setBit(result,i);
+
+        }
+    }
+    return result;
+
+}
+
+
+void printBinary(int n){
+    for(int i=10;i>=0;i--){//10 bits
+        cout<<((n>>i) & 1);
+    }
+    cout<<endl;
+}
+
+void evenOdd(int n){
+    if(n&1!=0)cout<<"Odd"<<endl;
+    else cout<<"Even"<<endl; // 0 
+    //algo 2
+
+}
+
+int divby2(int n){
+    return (n>>1);//integer divition
+}
+
+int mulby2(int n){
+    return (n<<1);
+}
+
+
 int main(){
      
  ios::sync_with_stdio(0);cin.tie(0);
     //  cout<<getBit(5,2)<<endl;
     // cout<<setBit(5,1)<<endl;
-    cout<<clearBit(5,2)<<endl;
-    cout<<updateBit(5,1,1)<<endl;
+    // cout<<clearBit(5,2)<<endl;
+    // cout<<updateBit(5,1,1)<<endl;
+    evenOdd(5);
      
     return 0;
 
