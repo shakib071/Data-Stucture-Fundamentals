@@ -11,6 +11,7 @@ void primeSeive(int n){
             }
         }
     }
+    
     for(int i=2;i<=n;i++){
         if(prime[i]==0){
             cout<<i<<" ";
