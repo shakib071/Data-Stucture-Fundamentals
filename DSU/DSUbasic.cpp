@@ -35,7 +35,7 @@ void dsu_initialize(int n){
 
 int find(int node){
   if(par[node]==-1) return node;
-//    return find(par[node]);
+//    return find(par[node]);//recursive parent khoja
 
    //complexity O(N);
    //naive version 
@@ -47,6 +47,14 @@ int find(int node){
 //    return leader;
    //or 
    return par[node]=find(par[node]);
+   //ekhane sobar parent update korci shathe shathe jate pareer
+   //bar O(1) pawya jay
+   //mane 1->2->3 hole 3 theke 2 a gia abar 1 a na giya
+   //1 bar er iteration er por 2 er par 1 abar 3 er par oo 1
+   //taile next time O(1) a khuje pai parent
+
+
+   
    //2 tai same 
    //long ar short shudhu
    //complexity Log(N)
